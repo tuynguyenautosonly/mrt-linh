@@ -1,12 +1,13 @@
+import {reviewedQA} from './qa.mjs';
 import {SAMPLE,serviceContext} from './showcase-engine.mjs';
 const $=s=>document.querySelector(s),el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
-let lang='vi',active='linh',role='advisor',identity='own',freshness='fresh';const t=(vi,en)=>lang==='vi'?vi:en;
+let lang='vi',active='image',role='advisor',identity='own',freshness='fresh';const t=(vi,en)=>lang==='vi'?vi:en;
 const originals=new Map([...document.querySelectorAll('[data-en]')].map(e=>[e,e.innerText]));
 const cases=[
- {id:'linh',agent:'Linh',vi:'Xe đã xong chưa?',en:'Is the vehicle ready?'},
  {id:'image',agent:'mrT',vi:'Đọc ảnh, tách dữ kiện',en:'Read an image, separate facts'},
  {id:'missing',agent:'mrT',vi:'Thiếu tài liệu đúng xe',en:'The right manual is missing'},
  {id:'newcase',agent:'mrT',vi:'Chuyển sang ca xe khác',en:'Switch to a different case'},
+ {id:'linh',agent:'Linh',vi:'Xe đã xong chưa?',en:'Is the vehicle ready?'},
  {id:'money',agent:'Linh',vi:'Báo giá có phải đã thu?',en:'Does a quote mean paid?'},
  {id:'event',agent:'Source workflow',vi:'Có thông báo thay đổi',en:'A record-change notification'}
 ];
@@ -43,6 +44,37 @@ function render(){const item=cases.find(c=>c.id===active);$('#scenarios').replac
   message(t('LUỒNG NGUỒN · MINH HỌA','SOURCE WORKFLOW · ILLUSTRATION'),t('1. Xác định đúng công việc và phiếu cha.\n2. Đọc đúng hồ sơ thay đổi và tập công việc liên quan; kiểm liên kết xe, khách và phiên bản.\n3. Chỉ đưa ngữ cảnh phù hợp cho trợ lý. Không coi một thông báo là yêu cầu quét lại cả app.\nLuồng đọc bù riêng chỉ tìm hồ sơ còn thiếu trong 10 ngày tiếp nhận gần nhất; hồ sơ cũ đã lưu vẫn được giữ.','1. Resolve the exact task and its parent receipt.\n2. Read the changed record and related task set; check vehicle, customer and version bindings.\n3. Supply only eligible context to the assistant. One notification is not a full-app rescan request.\nA separate recovery policy looks for incomplete records within the latest 10 intake-calendar dates; stored older records remain retained.'),'assistant');
   note=t('Sơ đồ minh họa kiến trúc đã triển khai nội bộ, theo ghi nhận của người duy trì. Không gọi hệ thống nguồn, không đo độ trễ và không chứng minh bao phủ mọi sự kiện.','Architecture illustration based on maintainer-reviewed private deployment records. No source system is contacted; no latency measurement or complete event coverage is claimed.');
  }
+ renderQA();
  $('#evidence').replaceChildren(el('strong',t('CĂN CỨ & GIỚI HẠN · ','BASIS & LIMITS · ')),el('span',note));
 }
-$('#lang').onclick=()=>{lang=lang==='vi'?'en':'vi';document.documentElement.lang=lang;for(const[e,original]of originals)e.innerText=lang==='en'?e.dataset.en.replaceAll('\\n','\n'):original;$('#lang').textContent=lang==='vi'?'EN':'VI';render();};render();
+function formattedExcerpt(text){
+ const p=el('p');
+ for(const part of text.split(/(\*\*[\s\S]+?\*\*)/g)){
+  if(part.startsWith('**')&&part.endsWith('**'))p.append(el('strong',part.slice(2,-2)));
+  else p.append(document.createTextNode(part.replace(/^---$/gm,'')));
+ }
+ return p;
+}
+function renderQA(){
+ const gallery=$('#qa-gallery');gallery.replaceChildren();
+ for(const q of reviewedQA){const card=el('article',undefined,'qa-card');
+ card.append(el('span',t('HỘI THOẠI ĐÃ LƯU · BÀI TẬP','RECORDED EXCHANGE · CONTROLLED EXERCISE'),'qa-label'),el('h3',t(q.titleVi,q.titleEn)));
+ card.append(el('p',t('Nguyên văn tiếng Việt.','English editorial translation; not the model’s original language.'),'translation-note'));
+ const question=el('div',undefined,'qa-question');question.append(el('strong',t('KTV hỏi','Technician asks')),el('p',t(q.questionVi,q.questionEn)));card.append(question);
+ const answer=el('div',undefined,'qa-answer');answer.append(el('strong','mrT'),formattedExcerpt(t(q.answerVi,q.answerEn)));card.append(answer);
+ card.append(el('p',t(q.reviewVi,q.reviewEn),'qa-review'));
+ const refs=el('div',undefined,'qa-refs');refs.append(el('span',t('Đối chiếu sau hội thoại: ','Post-conversation review: ')));
+ for(const ref of q.references){const a=el('a',ref.title);a.href=ref.url;a.target='_blank';a.rel='noopener';refs.append(a,document.createTextNode(' · '));}card.append(refs);gallery.append(card);
+ }
+}
+function applyLanguage(value){
+ lang=value==='vi'?'vi':'en';document.documentElement.lang=lang;
+ for(const[e,original]of originals)e.innerText=(lang==='en'?e.dataset.en.replaceAll('\\n','\n'):original).normalize('NFC');
+ $('#lang').textContent=lang==='vi'?'English':'Tiếng Việt';
+ $('#lang').setAttribute('aria-label',lang==='vi'?'Switch to English':'Chuyển sang tiếng Việt');
+ const url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);
+ for(const link of document.querySelectorAll('a[href^="report.html"]'))link.href=`report.html?lang=${lang}`;
+ render();
+}
+$('#lang').onclick=()=>applyLanguage(lang==='vi'?'en':'vi');
+applyLanguage(new URLSearchParams(location.search).get('lang')||'en');

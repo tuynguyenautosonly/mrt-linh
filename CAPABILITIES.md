@@ -1,9 +1,10 @@
 # Capabilities and evidence
 
-This page separates a working public demonstration from descriptions of a private deployment. No private transcripts, source records or deployment bundles are published. Private operational descriptions are **maintainer-reviewed statements**, not independently reproducible evidence in this repository.
+This page separates runnable public demonstrations, selected recorded training Q&A, and descriptions of a private deployment. Full private transcripts, customer source records and deployment bundles are not published. Private operational descriptions are **maintainer-reviewed statements**, not independently reproducible evidence in this repository.
 
 | Capability | Evidence level | What it does not establish |
 |---|---|---|
+| Recorded electrical-reasoning examples | Two selected stored controlled-exercise exchanges; Vietnamese originals and English editorial translations; post-conversation principle review | Customer repair success, independent Telegram delivery, universal model accuracy, or OEM-specific procedures |
 | Role, vehicle, customer and 600-second observation checks | Public synthetic implementation + runnable unit tests | Real authentication, production authorization, or complete private policy parity |
 | Reported-done versus pending-QC wording | Public authored draft selected after local checks | A live model generating the same wording, actual work completion, or actual QC approval |
 | CSV parsing, duplicate-ID handling, stale/invalid row withholding | Public implementation + unit tests | Authenticity of imported references or physical work |
@@ -20,6 +21,8 @@ This page separates a working public demonstration from descriptions of a privat
 - A reference is a supplied text label. It is not authenticated, opened, or checked against a private document.
 - Source status does not establish payment, delivery readiness, authorship or physical installation.
 - The showcase cannot send messages, change workshop records, run diagnostics, or access private manuals.
+- Everyday, premium and supercar names describe incoming question topics, not certified coverage. No manufacturer endorsement is implied.
+- Linh has maintenance-schedule/history advice functionality, but available acceptance records still describe partial quality. The public showcase does not certify that feature complete.
 
 ## Reproduce the public portion
 

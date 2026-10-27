@@ -1,6 +1,6 @@
 # Public showcase architecture
 
-The published site is a static application: HTML, CSS, ES modules and an invented CSV. It has no backend, database, model provider, analytics, cookies or local-storage persistence.
+The published site is a static application: HTML, CSS, ES modules, an invented CSV and two selected excerpts from stored controlled training conversations. It has no backend, database connection, model provider, analytics, cookies or local-storage persistence.
 
 ## Data path
 
@@ -12,7 +12,7 @@ The sample clock is fixed. Local imports use the user's current time. The CSV ch
 
 ## What stays outside
 
-Private integrations, messaging accounts, provider credentials, workshop datasets, private manuals, model prompts and deployment bundles are intentionally absent. Public examples were written anew and do not contain private transcripts or source extracts.
+Private integrations, messaging accounts, provider credentials, workshop datasets, private manuals, model prompts and deployment bundles are absent. The approved Q&A excerpt module contains only the selected controlled-exercise text and editorial translations. Full transcripts, account metadata and internal session identifiers remain private. Rendered Q&A images are labeled as rendered excerpts, not platform screenshots or independently verified message delivery.
 
 In a real integration, authentication, authorization, customer binding, version/queue checks and source validation belong on trusted infrastructure. Do not promote this client-side demonstration to production by merely connecting a database or adding an API key.
 

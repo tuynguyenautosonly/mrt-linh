@@ -1,30 +1,38 @@
-# mrT × Linh
+# mrT — Technical support for automotive repair workshops
 
-### Two assistants. One workshop workflow.
+### Help the technician investigate. Keep the evidence attached.
 
-**mrT helps technicians investigate. Linh helps service advisors explain progress.** This project shows how the two roles connect through vehicle records, source context and explicit limits.
+**mrT supports technicians in garages and automotive repair workshops:** structuring symptoms, working with diagnostic images, comparing measurements and consulting matching technical documents. Incoming questions have included everyday cars, premium vehicles and supercars. **Linh is the companion** for service updates and maintenance advice using workshop-management data and available schedule sources.
 
-[**Explore the interactive showcase →**](https://tuynguyenautosonly.github.io/mrt-linh/) · [Tiếng Việt](README.vi.md) · [Capabilities & evidence](CAPABILITIES.md) · [Contribute a case](CONTRIBUTING.md)
+[**Explore the interactive showcase →**](https://tuynguyenautosonly.github.io/mrt-linh/?lang=en) · [Tiếng Việt](README.vi.md) · [Capabilities & evidence](CAPABILITIES.md) · [Contribute a case](CONTRIBUTING.md)
 
 ![mrT and Linh overview](docs/social.svg)
 
 ## Try it in one minute
 
-1. Open the [showcase](https://tuynguyenautosonly.github.io/mrt-linh/). No account or API key.
-2. Select **“Is the vehicle ready?”** Toggle the role, vehicle identity and source age. Watch the local rule withhold mismatched context.
-3. Explore mrT’s examples: separate image text from a diagnosis, handle a missing model-specific manual, and start a new vehicle case.
-4. Try the [companion report checker](https://tuynguyenautosonly.github.io/mrt-linh/report.html): reported completion is not recorded acceptance. Inspect stale updates and conflicting IDs.
+1. Open the [English showcase](https://tuynguyenautosonly.github.io/mrt-linh/?lang=en). No account or API key.
+2. Read the [recorded technical training Q&A](https://tuynguyenautosonly.github.io/mrt-linh/?lang=en#field-notes). Original Vietnamese excerpts and editorial English translations are clearly distinguished.
+3. Explore mrT’s authored scenarios: separate image text from a diagnosis, handle a missing model-specific manual, and start a new vehicle case.
+4. Select Linh’s **“Is the vehicle ready?”** example and toggle role, vehicle identity and source age. The local rules are executable; the selected draft is authored.
+5. Try the [companion report checker](https://tuynguyenautosonly.github.io/mrt-linh/report.html?lang=en): reported completion is not recorded acceptance.
 
 The page supports English and Vietnamese. Imported CSV files are processed inside your browser tab, without uploads or local storage.
 
-![The interactive Linh scenario, with synthetic role, vehicle and freshness switches](docs/demo.png)
+![The mrT workshop walkthrough in English](docs/demo.en.png)
+
+## Recorded Q&A: show the reasoning
+
+The following is a rendered excerpt of an actual **stored training exchange**, with an English editorial translation. It is not a screenshot of Telegram, proof of message delivery, a customer repair, or a newly generated model response. [Read the originals and review scope](examples/README.md).
+
+![Recorded training Q&A: reasoning about an intermittent fault; English editorial translation](docs/qa-intermittent.en.png)
 
 ## What is actually here?
 
-This is a **public, synthetic showcase**, written separately from the private deployment. It is not the deployed agents, a live AI chatbot, a diagnostic product, or a production-ready workshop integration.
+This public showcase was written separately from the private deployment. It combines **approved excerpts from recorded controlled exercises** with **clearly labeled authored simulations**. It is not the deployed agents, a live AI chatbot, or a production-ready workshop integration.
 
 | Component | What runs in this repository |
 |---|---|
+| Recorded mrT Q&A | Two selected technical-training exchanges, original Vietnamese + English editorial translation; the displayed reasoning is reviewed, not all answers |
 | mrT walkthroughs | Authored scenarios explaining intended technical evidence discipline; no model or OCR calls |
 | Linh walkthrough | Executable local role / vehicle / customer / freshness checks, followed by an authored draft |
 | Source workflow | An architecture illustration based on maintainer-reviewed deployment records; no source connection |
@@ -37,6 +45,8 @@ This is a **public, synthetic showcase**, written separately from the private de
 - **mrT / technical assistant:** organize case facts, work with images and available documentation, and support investigation. A document for one platform must not silently become authority for another. No matched procedure means no invented coding/reset sequence.
 - **Linh / service advisor assistant:** turn authorized vehicle context into a concise draft for human review. “Technician reported done,” “QC accepted,” “quote complete,” “ready for delivery” and “paid” have different meanings.
 - **Shared source workflow:** target changed records, bind the receipt and task set, check source version and observation time, then project only appropriate context.
+
+**Vehicle scope:** Toyota Camry, BMW Z4/Lexus and Ferrari 458 appear as examples of incoming question topics. That is not a certified brand-coverage matrix, proof of successful repairs, or manufacturer endorsement. Model-specific specifications still require matching documents. Linh’s maintenance-advice quality remains partial; it is not presented as universally validated.
 
 ```mermaid
 flowchart LR
