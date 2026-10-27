@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {SAMPLE,serviceContext} from '../docs/showcase-engine.mjs';
+const input={record:SAMPLE,role:'advisor',vehicle:SAMPLE.vehicle,customer:SAMPLE.owner,now:Date.parse(SAMPLE.observedAt)+60000};
+test('synthetic advisor gets a draft, never an execution or delivery assertion',()=>{const r=serviceContext(input);assert.equal(r.kind,'draft');assert.equal(r.state,'reported_done_pending_qc');assert.equal(r.reference,'SYNTHETIC-TASK-42');assert.equal('price' in r,false);assert.equal('delivery' in r,false);});
+test('role mismatch is withheld',()=>assert.equal(serviceContext({...input,role:'visitor'}).reason,'role'));
+test('vehicle and customer must both match',()=>{for(const patch of [{vehicle:'DEMO-CAR-B'},{customer:'DEMO-CUSTOMER-B'}])assert.equal(serviceContext({...input,...patch}).reason,'identity');});
+test('600-second boundary is inclusive; stale, future and invalid observations are withheld',()=>{assert.equal(serviceContext({...input,now:Date.parse(SAMPLE.observedAt)+600000}).kind,'draft');for(const patch of [{now:Date.parse(SAMPLE.observedAt)+600001},{now:Date.parse(SAMPLE.observedAt)-1},{record:{...SAMPLE,observedAt:'bad'}}])assert.equal(serviceContext({...input,...patch}).reason,'freshness');});
+test('unknown task meanings are not inferred',()=>assert.equal(serviceContext({...input,record:{...SAMPLE,taskState:'all_done'}}).reason,'unmapped_state'));
+test('private input fields never appear in the projected object',()=>{const r=serviceContext({...input,record:{...SAMPLE,internalNote:'INTERNAL-SYNTHETIC',price:999,phone:'NOT-A-REAL-PHONE'}});assert.equal(JSON.stringify(r).includes('INTERNAL-SYNTHETIC'),false);assert.equal(Object.keys(r).length,3);});

@@ -1,0 +1,1 @@
+{"name":"mrt-linh-showcase","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test","start":"python -m http.server 8097 --bind 127.0.0.1 --directory docs"},"engines":{"node":">=20"},"license":"MIT"}

@@ -1,0 +1,19 @@
+name: Synthetic edge case
+description: Show a concrete behavior or explanation that should improve.
+body:
+  - type: markdown
+    attributes:
+      value: Use invented data only. Do not submit real customer data, private chats, manuals or credentials.
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario and steps
+      description: Which example did you try? What did you change?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and actual result
+    validations:
+      required: true

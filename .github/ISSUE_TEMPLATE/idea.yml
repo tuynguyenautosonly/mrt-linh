@@ -1,0 +1,10 @@
+name: Capability or integration idea
+description: Suggest a clear use case for mrT or Linh.
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you want to try?
+      description: Describe the role, source and desired outcome using invented data.
+    validations:
+      required: true

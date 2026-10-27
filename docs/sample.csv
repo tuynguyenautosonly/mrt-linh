@@ -1,0 +1,10 @@
+id,site,work,status,updated_at,due_at,evidence_ref
+JOB-101,Site Alpha,Replace a filter cartridge,doing,2026-10-27T08:00:00Z,2026-10-26T12:00:00Z,NOTE-101
+JOB-102,Site Beta,Inspect a circulation pump,reported_done,2026-10-27T07:30:00Z,2026-10-28T10:00:00Z,TECH-NOTE-102
+JOB-103,Site Gamma,Check ventilation airflow,accepted,2026-10-27T06:00:00Z,2026-10-27T08:00:00Z,ACCEPTANCE-103
+JOB-104,Site Delta,Repair a service panel,accepted,2026-10-27T07:00:00Z,2026-10-28T08:00:00Z,
+JOB-105,Site Epsilon,Replace a valve seal,waiting_parts,2026-10-20T08:00:00Z,2026-10-25T08:00:00Z,NOTE-105
+JOB-106,Site Zeta,Inspect a small compressor,doing,2026-10-27T08:00:00Z,2026-10-29T08:00:00Z,NOTE-106
+JOB-106,Site Zeta,Inspect a small compressor,accepted,2026-10-27T08:00:00Z,2026-10-29T08:00:00Z,ACCEPTANCE-106
+JOB-107,Site Eta,Check a motor bracket,finished,2026-10-27T08:00:00Z,2026-10-28T08:00:00Z,
+JOB-108,Site Theta,Check a pressure gauge,doing,2026-10-29T08:00:00Z,2026-10-29T10:00:00Z,
