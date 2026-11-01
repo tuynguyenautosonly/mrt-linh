@@ -10,3 +10,5 @@ Good contributions: invented failure cases, clearer role boundaries, accessibili
 4. Keep authored scenarios labeled as authored; do not describe them as model evaluations.
 
 No unsolicited promotion, purchased stars, fake testimonials or issue spam. An actionable critique is more valuable than a popularity number.
+
+For the [reusable skills](skills/README.md), use the **Improve a skill with an invented case** issue form. Include the skill version, what you actually tried (or mark a proposed counterexample), the scoped correction and a case where it should not apply. Keep personal ledgers outside the repository. A submitted lesson is a proposal; maintainers review it before updating the shared method and retain contributor attribution.

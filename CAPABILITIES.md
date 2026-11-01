@@ -11,6 +11,7 @@ This page separates runnable public demonstrations, selected recorded training Q
 | Technical case support, image/document use | Private workflow described by maintainer; public authored examples | Proven diagnostic accuracy, real OCR in this demo, or a universal OEM procedure database |
 | Targeted source refresh and receipt/task binding | Maintainer-reviewed private deployment and observed processing records | Public reproduction, all-workshop coverage, zero future failures, or an SLA |
 | Private source-bound state/item projections | Local/native checks reviewed by maintainer | Model uptake, full customer end-to-end behavior, or universal privacy guarantees |
+| Reusable skills and a private experience ledger | Public instruction files; local helper and synthetic checks where supplied | Native loading in every host, production authorization, model uptake, weight training or repair outcomes |
 
 ## Known limitations
 

@@ -1,5 +1,7 @@
 # mrT — Trợ lý kỹ thuật cho KTV gara & workshop sửa xe
 
+**Skill dùng lại được:** [Chẩn đoán, cập nhật dịch vụ và sổ kinh nghiệm riêng](skills/README.md). Hướng dẫn chung có phiên bản; ca và ghi chú của bạn giữ riêng.
+
 **mrT là trọng tâm: hỗ trợ KTV gom dữ kiện, đọc ảnh chẩn đoán, đối chiếu số đo và tra cứu tài liệu đúng ca xe. Linh là phần phụ trợ khai thác dữ liệu ứng dụng quản lý xưởng.**
 
 [**Mở trang giới thiệu và thử demo →**](https://tuynguyenautosonly.github.io/mrt-linh/?lang=vi) · [English](README.md)
