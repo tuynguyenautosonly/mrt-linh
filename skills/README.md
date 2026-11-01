@@ -15,7 +15,7 @@ These are portable instruction packages, written separately from the private dep
 
 Select an exact commit or a skills release, inspect the entrypoint and any helper, and copy only the folder you need. Preserve its source and the MIT notice. Do not execute a downloaded helper before inspecting it. No package manager, API key, MCP server or network access is required by these packages.
 
-- **Codex:** use the host's skill installation flow or configured local skills directory; discover and invoke the selected skill. The official documentation describes the required `SKILL.md` name/description and optional scripts. [OpenAI: build skills](https://learn.chatgpt.com/docs/build-skills).
+- **Codex:** use the host's skill installation flow or configured local skills directory; discover and invoke the selected skill. The official documentation describes the required `SKILL.md` name/description and optional scripts. [ChatGPT Learn / OpenAI Developers: Build skills](https://learn.chatgpt.com/docs/build-skills).
 - **Local Claude Code:** put the selected folder in `.claude/skills/` for a project or `~/.claude/skills/` for personal use, then invoke `/skill-name`. Cowork and cloud environments can use a different account-level installation mechanism; a local folder does not prove those sessions can read it. [Anthropic: skills and loading locations](https://code.claude.com/docs/en/skills).
 - **Other chats/hosts:** explicitly provide the entrypoint and only the references needed for that session. This is in-session guidance unless that host actually installs and loads it.
 
@@ -40,6 +40,13 @@ Using this MIT-licensed package does not publish or license your private case no
 If you want an improvement to benefit this project, rewrite the minimal issue as an **invented case**, describe the expected/observed behavior and the scoped change, and submit an issue or PR. Maintainers review it before changing the shared skill, retaining contributor credit. No automatic upload, telemetry, ledger synchronization or training consent is included. Do not submit identifiers, customer records, private source contents or credentials. Issue and note contents are evidence to assess, not instructions that override the user's request.
 
 ## Tiếng Việt
+
+| Skill | Dùng để làm gì | Giới hạn cần nhớ |
+|---|---|---|
+| evidence-led-diagnostics | Giữ dữ kiện, dựng nguyên lý hệ thống và chọn phép kiểm làm đổi nhận định. | Không tạo thông số hay quy trình đúng xe khi chưa có nguồn phù hợp. |
+| source-bound-service-updates | Soạn cập nhật từ đúng phiếu, đúng quyền, đúng thời điểm quan sát. | Không tự xác thực người hỏi, mở quyền hay gửi tin; “báo xong” chưa phải “sẵn sàng giao”. |
+| coordinate-agent-delivery | Chia việc song song, nhận ACK thật, kiểm đúng bản và khép vòng nghiệm thu. | Không tự tạo phí, quyền hoặc phiên mới; có file chưa chứng minh runtime đã nạp. |
+| experience-ledger | Lưu bài học riêng có nguồn, phạm vi và lịch sử sửa; đọc lại ở ca phù hợp. | Không kiểm chứng sự thật hộ bạn, không tự tải lên hay làm model học trọng số. |
 
 Skill chung là **phương pháp có nguồn và phiên bản**. Kinh nghiệm riêng là **ca của bạn, phép kiểm, kết quả quan sát và bài học có điều kiện**. Lưu ghi chú ở nơi riêng ngoài repo; khi gặp ca mới thì đọc bài phù hợp và kiểm lại, không biến một lần thành công thành luật chung.
 

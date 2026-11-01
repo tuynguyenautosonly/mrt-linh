@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         Use an entirely invented case. Do not upload customer records, real identifiers, private manuals, credentials or your private ledger. Submission is a review proposal, not an automatic update or proof of model learning.
+        Chỉ dùng ca giả lập; không gửi dữ liệu khách, tài liệu riêng, khóa truy cập hoặc sổ ca cá nhân. Đây là đề xuất để review, chưa phải bài học chung đã được nhận.
   - type: input
     id: version
     attributes:
