@@ -1,5 +1,7 @@
 # mrT — Technical support for automotive repair workshops
 
+**Reusable skills:** [Investigation, service updates and a private experience ledger](skills/README.md). Portable guidance; your case notes remain private.
+
 ### Help the technician investigate. Keep the evidence attached.
 
 **mrT supports technicians in garages and automotive repair workshops:** structuring symptoms, working with diagnostic images, comparing measurements and consulting matching technical documents. Incoming questions have included everyday cars, premium vehicles and supercars. **Linh is the companion** for service updates and maintenance advice using workshop-management data and available schedule sources.

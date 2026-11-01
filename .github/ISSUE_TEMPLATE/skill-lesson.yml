@@ -1,0 +1,44 @@
+name: Improve a skill with an invented case
+description: Propose a scoped lesson or correction without sharing private case notes.
+title: "Skill lesson: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use an entirely invented case. Do not upload customer records, real identifiers, private manuals, credentials or your private ledger. Submission is a review proposal, not an automatic update or proof of model learning.
+  - type: input
+    id: version
+    attributes:
+      label: Skill name and exact release or commit
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: Invented case and observations
+      description: Separate the facts supplied, hypothesis and any synthetic check result.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior and observed behavior
+      description: Say whether you actually tried the instructions or are proposing a counterexample. Do not invent a successful outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: Proposed change, scope and counterexample
+      description: What should change, when would it apply, and when should it not be reused?
+    validations:
+      required: true
+  - type: checkboxes
+    id: sharing
+    attributes:
+      label: Public contribution
+      options:
+        - label: This example is invented and contains no private records, identifiers, source contents or credentials.
+          required: true
+        - label: I am deliberately submitting this content for public review and have permission to share it.
+          required: true

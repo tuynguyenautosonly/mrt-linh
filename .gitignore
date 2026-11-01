@@ -3,3 +3,9 @@ node_modules/
 *.log
 test-results/
 playwright-report/
+
+# Personal experience belongs outside the public checkout.
+.private-experience/
+private-experience/
+__pycache__/
+*.pyc
