@@ -1,6 +1,6 @@
 # mrT — Technical support for automotive repair workshops
 
-**Reusable skills:** [Investigation, service updates and a private experience ledger](skills/README.md). Portable guidance; your case notes remain private.
+**Four reusable skills:** [Coordinate work, investigate a case, draft a service update and retain scoped experience](skills/README.md). Portable guidance; store your case notes separately in a private location you choose.
 
 ### Help the technician investigate. Keep the evidence attached.
 
@@ -9,6 +9,19 @@
 [**Explore the interactive showcase →**](https://tuynguyenautosonly.github.io/mrt-linh/?lang=en) · [Tiếng Việt](README.vi.md) · [Capabilities & evidence](CAPABILITIES.md) · [Contribute a case](CONTRIBUTING.md)
 
 ![mrT and Linh overview](docs/social.svg)
+
+## Four portable skills for workshop work
+
+| Start here | Practical use |
+|---|---|
+| [Coordinate agent delivery](skills/coordinate-agent-delivery/SKILL.md) | Split independent work, name one writer per package, obtain an actual acknowledgment and review the exact result before integration. |
+| [Evidence-led diagnostics](skills/evidence-led-diagnostics/SKILL.md) | Keep the case conditions and measurements attached, compare applicable sources and choose a check that could change the diagnosis. |
+| [Source-bound service updates](skills/source-bound-service-updates/SKILL.md) | Draft from the right authorized record and observation; a completion report is not handover acceptance. |
+| [Experience ledger](skills/experience-ledger/SKILL.md) | Retain a private lesson with its sources, scope and corrections, then recheck it in a later matching case. |
+
+Choose the workflow you need. These are instruction files, not a preconfigured team, live workshop connection or security boundary. For a combined **invented** exercise, a coordinator can assign separate technical and service reviews, compare their evidence, request a correction and retain a lesson only after an observed result. No customer records are needed to try it.
+
+[Installation and example prompts](skills/README.md#install-and-invoke) · [Existing skills release: skills-v0.1.1](https://github.com/tuynguyenautosonly/mrt-linh/releases/tag/skills-v0.1.1)
 
 ## Try it in one minute
 

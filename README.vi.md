@@ -1,10 +1,23 @@
 # mrT — Trợ lý kỹ thuật cho KTV gara & workshop sửa xe
 
-**Skill dùng lại được:** [Chẩn đoán, cập nhật dịch vụ và sổ kinh nghiệm riêng](skills/README.md). Hướng dẫn chung có phiên bản; ca và ghi chú của bạn giữ riêng.
+**Bốn skill dùng lại được:** [Điều phối công việc, tư duy chẩn đoán, cập nhật dịch vụ và lưu kinh nghiệm có điều kiện](skills/README.md). Hướng dẫn chung có phiên bản; lưu ca và ghi chú ở nơi riêng do bạn chọn.
 
 **mrT là trọng tâm: hỗ trợ KTV gom dữ kiện, đọc ảnh chẩn đoán, đối chiếu số đo và tra cứu tài liệu đúng ca xe. Linh là phần phụ trợ khai thác dữ liệu ứng dụng quản lý xưởng.**
 
 [**Mở trang giới thiệu và thử demo →**](https://tuynguyenautosonly.github.io/mrt-linh/?lang=vi) · [English](README.md)
+
+## Chọn skill theo việc cần làm
+
+| Skill | Tình huống sử dụng |
+|---|---|
+| [Điều phối agent](skills/coordinate-agent-delivery/SKILL.md) | Chia phần việc độc lập, mỗi gói một người ghi, nhận ACK thật và kiểm đúng bản trước tích hợp. |
+| [Tư duy chẩn đoán có bằng chứng](skills/evidence-led-diagnostics/SKILL.md) | Giữ điều kiện và số đo, đối chiếu nguồn phù hợp, chọn phép kiểm có thể làm đổi nhận định. |
+| [Cập nhật dịch vụ đúng phạm vi](skills/source-bound-service-updates/SKILL.md) | Soạn từ đúng phiếu được phép đọc và đúng mốc quan sát; “báo xong” chưa phải nghiệm thu bàn giao. |
+| [Sổ kinh nghiệm riêng](skills/experience-ledger/SKILL.md) | Lưu bài học cùng nguồn, điều kiện và lịch sử sửa; kiểm lại khi áp sang ca mới. |
+
+Không cần dùng cả bốn trong mọi việc. Ví dụ **giả lập**: người điều phối giao riêng phần kỹ thuật và phần diễn đạt dịch vụ, so bằng chứng, yêu cầu sửa rồi lưu bài học sau khi có kết quả quan sát. Các skill là hướng dẫn, không tự tạo đội agent, kết nối xưởng, cấp quyền hay bảo đảm model áp dụng đúng.
+
+[Cài và gọi skill](skills/README.md#install-and-invoke) · [Bản phát hành skill hiện có: skills-v0.1.1](https://github.com/tuynguyenautosonly/mrt-linh/releases/tag/skills-v0.1.1)
 
 ![Tình huống mrT bằng tiếng Việt](docs/demo.vi.png)
 
